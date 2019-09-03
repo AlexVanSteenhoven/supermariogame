@@ -1,0 +1,14 @@
+{
+  "name": "super-mario",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ./public"
+  },
+  "author": "Alex van Steenhoven",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^6.1.0"
+  }
+}
