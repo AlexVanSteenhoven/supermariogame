@@ -20,7 +20,7 @@ Promise.all([createMario(), loadBackgroundSprites(), loadLevel('1-1')]).then(
     );
     //comp.layers.push(backgroundLayer);
 
-    const gravity = 30;
+    const gravity = 2000;
     mario.pos.set(64, 180);
     mario.vel.set(200, -600);
 
@@ -29,9 +29,9 @@ Promise.all([createMario(), loadBackgroundSprites(), loadLevel('1-1')]).then(
 
     const timer = new Timer(1 / 60);
     timer.update = function update(deltaTime) {
-      comp.draw(context);
       mario.update(deltaTime);
-      mario.vel.y += gravity;
+      comp.draw(context);
+      mario.vel.y += gravity * deltaTime;
     };
 
     timer.start();
